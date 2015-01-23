@@ -1,5 +1,8 @@
 FaqI18n::Application.routes.draw do
+
+  get '/change_locale/:locale', to: 'language#change_locale', as: :change_locale
   resources :faqs
+  root to: 'faqs/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
