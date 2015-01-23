@@ -1,15 +1,8 @@
 class FaqsController < ApplicationController
   before_action :set_faq, only: [:show, :edit, :update, :destroy]
 
-  # GET /faqs
-  # GET /faqs.json
   def index
     @faqs = Faq.all
-  end
-
-  # GET /faqs/1
-  # GET /faqs/1.json
-  def show
   end
 
   # GET /faqs/new
@@ -19,6 +12,7 @@ class FaqsController < ApplicationController
 
   # GET /faqs/1/edit
   def edit
+    @faq = Faq.find(params[:id])
   end
 
   # POST /faqs
@@ -28,7 +22,7 @@ class FaqsController < ApplicationController
 
     respond_to do |format|
       if @faq.save
-        format.html { redirect_to @faq, notice: 'Faq was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Faq was successfully created.' }
         format.json { render action: 'show', status: :created, location: @faq }
       else
         format.html { render action: 'new' }
@@ -40,9 +34,10 @@ class FaqsController < ApplicationController
   # PATCH/PUT /faqs/1
   # PATCH/PUT /faqs/1.json
   def update
+    @faq = Faq.find(params[:id])
     respond_to do |format|
       if @faq.update(faq_params)
-        format.html { redirect_to @faq, notice: 'Faq was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Faq was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
