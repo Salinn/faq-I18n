@@ -32,6 +32,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'bootstrap-sass'
+gem 'rails-i18n', '~> 4.0.0'
+gem 'globalize', '~> 4.0.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
