@@ -51,7 +51,7 @@ Now that we can change our locale we need to make sure that it gets set correctl
 
 When you are done and ready to start using multiple languages you have to tell globalize what needs to be translated. This is done in the models that you care aoubt
 
-translates :question, :answer
+  translates :question, :answer
 
 You then need to make a migration 
   rails g migration create_translation_for_faqs
