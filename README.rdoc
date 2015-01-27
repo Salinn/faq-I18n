@@ -37,7 +37,7 @@ Now that we have set up the locales to be used we should specify our root_path a
   
 Now that we can change our locale we need to make sure that it gets set correctly and this is done in the application_controller
 
-before_action :set_locale #This is important, without it then ever language locale will overwrite the last language locale update to each post
+  before_action :set_locale #This is important, without it then ever language locale will overwrite the last language locale update to each post
 
   def set_locale
     if cookies[:faq_locale] && I18n.available_locales.include?(cookies[:faq_locale].to_sym)
