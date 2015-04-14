@@ -1,4 +1,4 @@
-This was focused on making a FAQ page friendly for anyone who wants to read it. 
+This was focused on making a FAQ page friendly for anyone who wants to read it. To see a quick example of this go to https://faq-i18n.herokuapp.com/
 
 Great resource for anyone who is looking at the globalize gem is to read this article http://www.sitepoint.com/go-global-rails-i18n/
 
